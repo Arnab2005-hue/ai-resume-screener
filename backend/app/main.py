@@ -81,3 +81,35 @@ def model_info():
         "maximum_batch_size": MAX_BATCH_SIZE,
         "maximum_file_size_mb": MAX_FILE_SIZE_MB,
     }
+
+
+
+# ============================================================
+# DATABASE INTEGRATION
+# ============================================================
+
+from app.api.v1.endpoints.database import (
+    router as database_router,
+)
+
+from app.database_middleware import (
+    database_persistence_dispatch,
+)
+
+
+app.include_router(
+    database_router
+)
+
+
+@app.middleware("http")
+async def database_persistence_middleware(
+    request,
+    call_next,
+):
+
+    return await database_persistence_dispatch(
+        request,
+        call_next,
+    )
+
