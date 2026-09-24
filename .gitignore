@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+# Virtual environment
+.venv/
+venv/
+env/
+# Jupyter / Colab
+.ipynb_checkpoints/
+# Environment / secrets
+.env
+.env.*
+!.env.example
+# Logs
+*.log
+# Temporary files
+tmp/
+temp/
+# Local test uploads
+test_uploads/
+uploads/
+# OS
+.DS_Store
+Thumbs.db
+# IDE
+.vscode/
+.idea/
+# Streamlit
+.streamlit/secrets.toml
+*.pyc
