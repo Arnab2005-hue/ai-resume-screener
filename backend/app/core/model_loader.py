@@ -4,7 +4,7 @@ from functools import lru_cache
 
 import faiss
 import joblib
-from sentence_transformers import SentenceTransformer
+from app.core.onnx_embedding import ONNXEmbeddingModel
 
 from app.core.config import (
     RESUMES_FILE,
@@ -102,9 +102,7 @@ def get_model_bundle():
     # Embedding model
     # --------------------------------------------------------
 
-    embedding_model = SentenceTransformer(
-        EMBEDDING_MODEL_NAME
-    )
+    embedding_model = ONNXEmbeddingModel()
 
     # --------------------------------------------------------
     # Artifact validation

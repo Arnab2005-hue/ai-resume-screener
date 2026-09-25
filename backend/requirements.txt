@@ -9,9 +9,7 @@ scipy
 scikit-learn==1.9.1
 joblib
 spacy
-sentence-transformers
 faiss-cpu
 pydantic
-
-SQLAlchemy>=2.0,<3.0
-psycopg[binary]>=3.2,<4.0
+onnxruntime
+tokenizers

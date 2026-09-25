@@ -9,6 +9,7 @@ scipy
 scikit-learn==1.9.1
 joblib
 spacy
-sentence-transformers
 faiss-cpu
 pydantic
+onnxruntime
+tokenizers
